@@ -1,5 +1,5 @@
-/* custom mobile styling*/
-@media (max-width:1000px) {
+/* mobile styling*/
+@media (min-width: 320px) {
     @font-face {
         font-family: logo-font;
         src: url(./Norse-Bold.otf);
@@ -148,7 +148,7 @@
         font-size: 4vw;
         display: flex;
         flex-direction: column;
-        width: 80%;
+        width: min(80%, 500px);
     }
 
     .login-card form .field label {
@@ -203,7 +203,7 @@
     }
 }
 
-
+/*desktop styling*/
 @media (min-width: 1001px)
 {
     @font-face {
@@ -219,33 +219,21 @@
     }
 
     body {
-        margin: 0;
-        display: flex;
         flex-direction: row;
-        min-height: 100vh;
     }
 
     .left-side {
-        box-sizing: border-box;
+        height: auto;
+        width: 35vw;
         padding-top: 20vh;
         padding-bottom: 16px;
-        width: 35vw;
-        flex: 1 0 auto;
-        display: flex;
-        flex-direction: column;
         justify-content: space-between;
-        align-items: center;
-        background-image: url(./left-image.jpg);
         background-size: cover;
     }
 
     .logo-card {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: rgba(0, 0, 0, 0.4);
+        height: auto;
         align-self: flex-start;
-        width: 100%;
     }
 
     .logo-and-text {
@@ -253,17 +241,15 @@
         align-items: center;
     }
 
-    .logo-card .text {
-        font-family: logo-font;
-        font-size: 6rem;
-        color: #F4F6F7;
-    }
-
     .logo-card .logo {
         width: 140px;
-        aspect-ratio: auto;
+        height: auto;
         padding: 20px;
-        padding-right: 0;
+    }
+
+    .footer
+    {
+        display: block;
     }
 
     .footer,
@@ -273,14 +259,7 @@
     }
 
     .right-side {
-        flex: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
         gap: 100px;
-        padding-top: 5vh;
-        color: black;
-        background-color: #F9FAFB;
     }
 
     .right-side>* {
@@ -289,10 +268,7 @@
 
     .right-side .upper-text p {
         font-size: 2.5rem;
-        font-weight: 500;
         padding-right: 100px;
-        margin-top: 0;
-        margin-bottom: 0;
     }
 
     .right-side .upper-text p:nth-child(1) {
@@ -300,89 +276,34 @@
     }
 
     .right-side button {
-        background-color: #596D48;
-        color: #F4F6F7;
-        width: fit-content;
         padding-left: 80px;
         padding-right: 80px;
         padding-top: 25px;
         padding-bottom: 25px;
         font-size: 2rem;
-        font-weight: bold;
         border-radius: 16px;
-        border: 0;
     }
 
     .right-side .login-option {
         font-size: 2rem;
-        margin-bottom: 5vh;
-    }
-
-    .right-side .login-option a {
-        text-decoration: none;
-        font-weight: 500;
-        color: #596D48;
-    }
-
-    .right-side .login-option a:hover {
-        color: #4F7330;
-    }
-
-    .right-side button:hover {
-        background-color: #4F7330;
     }
 
     .login-card {
-        background-color: #fff;
         margin-left: 0;
-        padding-top: 32px;
-        padding-bottom: 64px;
         padding-left: 100px;
     }
 
     .login-card h1 {
         font-size: 2.5rem;
-        font-weight: 500;
-        padding-top: 0;
-        padding-bottom: 40px;
-    }
-
-    .login-card form {
-        display: flex;
-        gap: 40px 100px;
-        flex-wrap: wrap;
     }
 
     .login-card form .field {
-        display: flex;
-        flex-direction: column;
+        font-size: 1rem;
         width: 350px;
     }
 
-    .login-card form .field label {
-        font-weight: 500;
-        letter-spacing: 0.2rem;
-        margin-bottom: 5px;
-    }
-
     .login-card form .field input {
-        box-sizing: border-box;
-        background-color: #FFFEFE;
-        border: 1px solid #E8E9ED;
-        border-radius: 8px;
-        height: 45px;
-        color: #000;
-        padding-left: 12px;
         font-size: 1.25rem;
-    }
-
-    .login-card form .field input:focus-visible {
-        border: 2px solid#5277DE;
-        outline: 0;
-    }
-
-    .login-card form .field input:invalid {
-        border: 2px solid red;
     }
 
     /*this code block makes the styling for empty inputs default and not invalid*/
@@ -410,6 +331,7 @@
         display: none;
     }
 }
+/*extra desktop styling for larger monitors*/
 @media (min-width:1301px) {
 
     .right-side .upper-text p
