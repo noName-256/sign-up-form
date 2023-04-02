@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./javascript.js" defer></script>
+    <title>Sign-up</title>
+</head>
+
+<body>
+    <div class="left-side">
+        <div class="logo-card">
+            <div class="logo-and-text">
+                <img src="./logo.png" alt="logo" class="logo">
+                <div class="text">ODIN</div>
+            </div>
+        </div>
+        <div class="footer">
+            Photo by <a href="https://unsplash.com/@haliewestphoto">Halie West</a> on <a
+                href="https://unsplash.com/">Unsplash</a>
+        </div>
+    </div>
+    <div class="right-side">
+        <div class="upper-text">
+            <p>This is not a real online service! You know you
+                need something like this in your life to help
+                you realize your deepest dreams.
+                <br>Sign up <em>now</em> to get started
+            </p>
+            <p>You <em>know</em> you want to.</p>
+        </div>
+        <div class="login-card">
+            <h1>Let's do this!</h1>
+            <form action="https://httpbin.org/post" method="post" id="login-form">
+                <div class="field">
+                    <label for="first-name">FIRST NAME</label>
+                    <input type="text" id="first-name" name="first-name" placeholder=" " required>
+                </div>
+                <div class="field">
+                    <label for="last-name">LAST NAME</label>
+                    <input type="text" id="last-name" name="last-name" placeholder=" " required>
+                </div>
+
+
+                <div class="field">
+                    <label for="email">EMAIL</label>
+                    <input type="email" id="email" name="email" placeholder=" " required>
+                    <div class="invalid-text" id="invalid-email">* Invalid email</div>
+                </div>
+                <div class="field">
+                    <label for="phone-number">PHONE NUMBER</label>
+                    <input type="tel" id="phone-number" name="phone-number" pattern="([0-9]{10})|([0-9]{4} [0-9]{3} [0-9]{3})" placeholder=" " required>
+                    <div class="invalid-text" id="invalid-phone-number">* Invalid phone number</div>
+                </div>
+
+
+                <div class="field">
+                    <label for="password">PASSWORD</label>
+                    <input type="password" id="password" name="password" placeholder=" " required>
+                    <div class="invalid-text" id="password-mismatch">* Passwords do not match</div>
+                    <div class="invalid-text" id="min-length">* At least 8 characters long</div>
+                    <div class="invalid-text" id="min-letter">* At least 1 letter</div>
+                    <div class="invalid-text" id="min-digit">* At least one digit</div>
+                </div>
+                <div class="field">
+                    <label for="password-confirm">CONFIRM PASSWORD</label>
+                    <input type="password" id="password-confirm" placeholder=" " required>
+                </div>
+            </form>
+        </div>
+        <button type="submit" form="login-form" class="create-account">Create Account</button>
+        <div class="login-option">
+            Already have an account?
+            <a href="./index.html">Log in</a>
+        </div>
+    </div>
+</body>
+
+</html>
